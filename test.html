@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giao Diện Website</title>
+    <style>
+        /* Phần Header */
+        header {
+            background-color: #ec93ec; /* Màu tím */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .logo {
+            flex: 2;
+        }
+
+        .menu {
+            flex: 6;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search {
+            flex: 4;
+            margin: 0 10px;
+        }
+
+        .user {
+            flex: 2;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Phần Main */
+        main {
+            background-color: #fff; /* Màu trắng */
+            display: flex;
+            padding: 20px;
+        }
+
+        .functions {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .functions button {
+            margin-bottom: 10px;
+        }
+
+        .text-input {
+            flex: 10;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        .text-input input[type="text"] {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            background-color: transparent;
+        }
+
+        .text-input button {
+            padding: 10px 20px;
+            background-color: #800080;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Phần Footer */
+        footer {
+            background-color: #a0d3e0; /* Màu xanh nhạt */
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .social-icons {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+            <h1></h1>
+        </div>
+        <div class="menu">
+            <button>Home</button>
+            <button>Search</button>
+            <input type="text" class="search" placeholder="Tìm kiếm">
+        </div>
+        <div class="user">
+            <button>Tài khoản</button>
+            <button>Thông báo</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="functions">
+            <button>Sự kiện</button>
+            <button>Mục tiêu tháng</button>
+            <button>Việc quan trọng</button>
+            <button>Điều biết ơn</button>
+            <button>Thói quen</button>
+            <button>Một tháng nhìn lại</button>
+            <button>Biểu đồ cảm xúc</button>
+        </div>
+        <div class="text-input">
+            <input type="text" placeholder="Nhập điều biết ơn">
+            <button>Lưu</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <!-- Thêm thông tin liên hệ ở đây -->
+            <p>Số điện thoại: 123456789</p>
+        </div>
+        <div class="social-icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-zalo"></i>
+        </div>
+    </footer>
+</body>
+</html>
