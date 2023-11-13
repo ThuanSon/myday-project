@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        // import Lovely from ''
+        // const icon = ;
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([['', 6],
+          ['01-11-2002', 2],['02-11-2002', 1],['03-11-2002', 4],['04-11-2002', 3],['05-11-2002', 1],
+          ['06-11-2002', 5],['07-11-2002', 5],['08-11-2002', 1],['09-11-2002', 5],['10-11-2002', 1],
+          ['11-11-2002', 2],['12-11-2002', 1],['13-11-2002', 2],['14-11-2002', 3],['15-11-2002', 4],
+          ['16-11-2002', 5],['17-11-2002', 5],['18-11-2002', 5],['19-11-2002', 4],['20-11-2002', 5],
+          ['21-11-2002', 1],['22-11-2002',2],['23-11-2002', 2],['24-11-2002', 1],['25-11-2002', 3],
+          ['26-11-2002', 3],['27-11-2002', 4],['28-11-2002', 5],['29-11-2002', 1],['30-11-2002', 5],
+        ]);
+        // data.addRows([['', 6],
+        //   ['01-11-2002', 2],['02-11-2002', 1],['03-11-2002', 1],['04-11-2002', 3],['05-11-2002', 1],
+        //   ['06-11-2002', 1],['07-11-2002', 5],['08-11-2002', 1],['09-11-2002', 5],['10-11-2002', 1],
+        //   ['11-11-2002', 2],['12-11-2002', 5],['13-11-2002', 2],['14-11-2002', 3],['15-11-2002', 4],
+        //   ['16-11-2002', 5],['17-11-2002', 5],['18-11-2002', 5],['19-11-2002', 4],['20-11-2002', 5],
+        //   ['21-11-2002', 1],['22-11-2002',2],['23-11-2002', 2],['24-11-2002', 1],['25-11-2002', 3],
+        //   ['26-11-2002', 3],['27-11-2002', 4],['28-11-2002', 5],['29-11-2002', 5],['30-11-2002', 5],
+        // ]);
+        // var formatter = new google.visualization.PatternFormat('<img src="../../assets/image/icon/{0}.png" style="height: 20px; width: 20px;">');
+        // formatter.format(data, [1]);
+        var options = {'title':'Chủ đề tháng',
+                       'width':860,
+                       'height':600,
+                        'color': 'green'};
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
