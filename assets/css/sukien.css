@@ -1,0 +1,16 @@
+.bg-primary {
+  background-color: #9575cd !important;
+}
+.col-md-3 {
+  background-color: #9575cd;
+}
+#calendar a{
+    color: unset;
+    text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+.fc-toolbar-chunk{
+  padding: 10px;
+}
