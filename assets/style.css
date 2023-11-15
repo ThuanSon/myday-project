@@ -1,0 +1,12 @@
+body{
+    width: 80%;
+    height: auto;
+}
+.container {
+    width: 80%;
+    height: auto;
+    padding-left: 200px;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+}
