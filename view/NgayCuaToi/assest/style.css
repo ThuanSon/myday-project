@@ -1,0 +1,324 @@
+    /* Reset CSS */
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        
+    }
+    
+    html{
+        scroll-behavior: smooth;
+        font-family: helvetica, arial, sans-serif;
+    }
+    
+    b {
+        font-size: 14px;
+        color: #000000;
+        font: 700 14px "Inter", sans-serif;
+    }
+    
+    .container {
+        background-color: #e5e5e5;
+        width: 100%;
+        height: 1024px;
+        
+    }
+    
+    .header {
+        background: #9575CD;
+        width: 100%;
+        height: 64px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .task-menu {
+        background: #ffffff;
+        width: 280px;
+        height: 960px;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+    }
+    .test {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:1px solid #000000; 
+        border-radius: 5px;
+        width: 100%;
+    }
+    .text_test {
+        border: none;
+        width: 95%;
+        border-radius: 10px;
+        padding: 3px 7px;
+    }
+    .text_test:focus {
+        outline: none;
+    }
+    
+    .check_test {
+        margin-left: 10px;
+        width: 10%;
+    
+    }
+    
+    #input-task {
+        display: flex;
+    }
+    
+    .content-todo {
+        background-color: #ffffff;
+        width: 1133px;
+        height: 910.345px;
+        border-radius: 15px;
+        position: relative;
+        overflow: visible;
+        top: 90px;
+        right: 30px;
+        left: 310px;
+        bottom: 23px;
+    }
+    
+    
+    div .header-content-todo  {
+        display: flex;
+    }
+    
+    .check-icon i {
+        font-size: 76px;
+        margin: 5px 0 0 16px;
+    }
+    
+    .title-header {
+        line-height: 106px;
+        margin-left: 12px;
+    }
+    
+    .header-content-todo {
+        background: #ffffff;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.8);
+        border-width: 0px 0px 1px 0px;
+        width: 1133px;
+        height: 106px;
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        
+    }
+    
+    .todo-all-input {
+        display: flex; /* This will arrange all children in a row */
+        justify-content: flex-start; /* Align children to the left */
+        align-items: flex-start; /* Align children to the top */
+        gap: 10px; /* Space between the child elements */
+      }
+    
+    .todo-all-work {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align children to the left */
+        width: fit-content;
+        margin-left: 0; /* Align the container to the left */
+        margin-right: auto; /* This will ensure that the element is pushed to the left */
+        gap: 10px;
+    }
+    
+    .input-form-work {
+        margin-top: 24px;
+        margin-left: 24px;
+    }
+    
+    .input-form-emoji {
+        margin-top: 34px;
+        margin-left: 24px;
+    }
+    
+    .input-form-water {
+        margin-top: 34px;
+        margin-left: 24px;
+    }
+    
+      .todo-all-work {
+        margin-right: 0px;
+        /* Common styles for the todo-all-* divs */
+      }
+      
+      /* Style for .todo-all-emoji */
+      .todo-all-emoji {
+        /* Common styles for the todo-all-* divs */
+      }
+      
+      /* Style for .todo-all-water */
+      .todo-all-water {
+        /* Common styles for the todo-all-* divs */
+      }
+    .input-form {
+        width: 334px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        /* margin-top: 44px;
+        margin-left: 24px;  */
+    }
+    
+    .text-input,
+    .btn-emoji,
+    .btn-water {
+        width: 100%; /* Make the input take up the full width of the form */
+      height: 66px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: #969696;
+      border-width: 1px;
+      background: #ffffff;
+      padding: 10px; /* Optional for internal spacing */
+      font-size: 16px; /* Optional for font size */
+      box-sizing: border-box;
+    }
+    
+    
+    .todo-label {
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        top: 20px;
+        left: 27px;
+        
+    }
+    
+    .todo-label b {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+    }
+    
+    .todo-note-label {
+        background: rgba(248, 236, 122, 0.77);
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        width: 108px;
+        height: 34px;
+        top: 14px;
+        left: 14px;
+    }
+    
+    .todo-note-label b {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+    
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    .todo-work-label {
+        background: rgba(248, 236, 122, 0.77);
+        width: 108px;
+        height: 34px;
+    }
+    
+    .todo-emoji-label {
+        background: rgba(252, 159, 159, 0.55);
+        width: 109px;
+        height: 34px;
+    }
+    
+    .todo-water-label {
+        background: rgba(122, 248, 203, 0.77);
+        width: 149px;
+        height: 34px;
+    }
+    
+    .todo-note {
+        background: #ffffff;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #969696;
+        border-width: 1px;
+        width: 1042px;
+        height: 160px;
+        top: 24px;
+        left: 24px;
+        position: relative;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+        display: flex; /* This will arrange all children in a row */
+        justify-content: flex-start; /* Align children to the left */
+        align-items: flex-start; /* Align children to the top */
+        gap: 10px;
+    }
+    
+    .todo-note-content {
+        background: #ffff;
+        border-radius: 8px;
+        width: 85%;
+        height: 83%;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+    
+    textarea {
+        resize: none;
+        min-height: 3em;
+        line-height: 2;
+    }
+    
+    #saveButton {
+        background-color: #338fff; /* Light blue */
+        border: none; /* Removes the default border */
+        border-radius: 5px; /* Slight border radius */
+        color: white; /* Text color */
+        padding: 10px 20px; /* Top and bottom padding of 10px, left and right padding of 20px */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer; /* Changes the mouse cursor to a pointer */
+        transition: background-color 0.3s; /* Smooth transition for background color */
+        margin: 52px 116px 0 0;
+        float: right;
+    }
+    
+    #saveButton:hover {
+        background-color: #006699; /* Darker blue on hover */
+    }
+    
+    .input-form button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    }
+    
+    .icon-happy i {
+        font-size: 45px;
+    }
+    
+    .btn-emoji b {
+        line-height: 46px;
+        padding: 0 0 0 12px;
+    }
+    
+    .add-todo-work{
+        margin: -10px 0 -17px 149px;
+        font-size: 24px;
+    }
+    
+    
+    
+    
