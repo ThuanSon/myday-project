@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php
-        include('view/index.php');
+        include('view/DangNhap_DangKy/index.php');
     ?>
-    <h1>Trang Chủ</h1>
 </body>
 </html>

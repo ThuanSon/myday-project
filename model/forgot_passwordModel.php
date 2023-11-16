@@ -1,39 +1,34 @@
 <?php
-class ForgotPasswordModel {
-    public function sendResetLink($email) {
-        $conn = mysqli_connect("localhost",$username,$password,'mydayhandbook');
-        if ($conn->mydayhandbook) {
-            die("Kết nối không thành công: " . $conn->mydayhandbook);
-        }
-        // Thực hiện truy vấn để kiểm tra xem email có tồn tại trong cơ sở dữ liệu hay không
-        $sql = "SELECT * FROM users WHERE email='$email'";
-        $result = $conn->query($sql);
+    $email_error = $success_message = "";
 
-        if ($result->num_rows == 1) {
-            // Tạo mã thông báo cho liên kết đặt lại mật khẩu (có thể làm bằng UUID hoặc mã ngẫu nhiên)
-            $reset_token = uniqid();
+    if (isset($_POST['submit'])) {
+        $email = $_POST['email'];
 
-            // Lưu mã thông báo vào cơ sở dữ liệu, thông tin này có thể được lưu trong một cột riêng biệt trong bảng người dùng
-            $update_sql = "UPDATE users SET reset_token='$reset_token' WHERE email='$email'";
-            $update_result = $conn->query($update_sql);
+        if (empty($email)) {
+            $email_error = "Vui lòng nhập địa chỉ email";
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email_error = "Định dạng email không hợp lệ";
+        } else {
+            // Validate email
 
-            if ($update_result) {
-                // Gửi email chứa liên kết đặt lại mật khẩu đến email của người dùng
-                $reset_link = "https://yourdomain.com/reset_password.php?token=$reset_token";
-                $email_subject = "Yêu cầu đặt lại mật khẩu";
-                $email_body = "Nhấn vào đây để đặt lại mật khẩu của bạn: $reset_link";
-                
-                // Gửi email bằng cách sử dụng hàm mail() hoặc thư viện gửi email khác
-                // Ví dụ: mail($email, $email_subject, $email_body);
-                
-                // Trả về true nếu gửi email thành công
-                return true;
+            $is_email_valid = kiem_tra_email_trong_csdl($email);
+
+            if (!$is_email_valid) {
+                $email_error = "Email không tồn tại";
+            } else {
+                $success_message = "Hướng dẫn đặt lại mật khẩu đã được gửi đến địa chỉ email của bạn.";
             }
         }
-
-        // Đóng kết nối sau khi thực hiện truy vấn
-        $conn->close();
-        return false;
     }
-}
-?>
+
+    function kiem_tra_email_trong_csdl($email)
+    {
+        // Thực hiện truy vấn cơ sở dữ liệu ở đây
+        // Trả về true nếu email tồn tại, ngược lại trả về false
+
+        // Ví dụ: Giả sử email là hợp lệ để minh họa
+        $ket_qua = true;
+
+        return $ket_qua;
+    }
+    ?>

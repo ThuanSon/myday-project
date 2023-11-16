@@ -3,7 +3,7 @@
 if(isset($_SESSION['username']) && isset($_SESSION['matKhau']))
 {
     echo 'Chaof mung';
-    session_destroy();
+    header('Location: index.php');
 }
 else
 {
