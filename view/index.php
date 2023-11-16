@@ -1,3 +1,1 @@
-<?php
-    include_once('BieuDoCamXuc/index.php');
-?>
+<h1>Trang Chủ</h1>

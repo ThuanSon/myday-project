@@ -10,6 +10,6 @@
     <?php
         include('view/index.php');
     ?>
-    
+    <h1>Trang Chủ</h1>
 </body>
 </html>
